@@ -18,8 +18,6 @@ x(2,1) = 3.5;
 global dt
 dt= 0.01; 
 
-%scaling!
-
 %% Reference trajectory mission
 
 %Traj. generation
@@ -117,6 +115,7 @@ A = Hp ;
 Qcost= zeros(hor_sideHankel) ;
 % if R=1; Q=1;R=2*R; Q=2Q; then
 %u
+%scaling!
 Q = 0.003;
 R = 1e-9*Q;
 sqUf = sum(Uf.^2);
