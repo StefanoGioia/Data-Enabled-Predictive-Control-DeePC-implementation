@@ -199,8 +199,8 @@ end
 
 function cost = DeePCcost(xx)
       
-    global r predicted_steps ysize Yf Uf i
-    R=0.00000001; Q=1e11*R;
+    %global r predicted_steps ysize Yf Uf i
+    R=0.00000001; Q=1e11*R; %scaling!
         
     %   Q and R here just multiplicator 1
     cost= Q*sum((Yf*xx - reshape(r(:,i:i+predicted_steps-1),[ysize*predicted_steps,1])).^2)+ R*sum((Uf*xx).^2);
